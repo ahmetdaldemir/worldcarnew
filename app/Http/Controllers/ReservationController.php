@@ -336,6 +336,7 @@ class ReservationController extends Controller
         $reservation_informations->nationality = $request->nationality;
         $reservation_informations->birthday = date('Y-m-d', strtotime($request->birthday));
         $reservation_informations->driving_age = $request->driving_age;
+        $reservation_informations->gender = $customer->gender ?? "men";
 
 
         $reservation_informations->save();

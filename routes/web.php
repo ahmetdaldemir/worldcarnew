@@ -230,6 +230,7 @@ Route::group(['prefix' => '/admin', 'namespace' => 'Admin', 'as' => 'admin.'], f
     Route::get('/admin/plates/delete', 'PlateController@delete')->name('admin.plates.delete');
     Route::get('/admin/plates/archive', 'PlateController@archive')->name('admin.plates.archive');
     Route::get('/admin/plates/get', 'PlateController@get')->name('admin.plates.get');
+    Route::get('/admin/plates/show', 'PlateController@show')->name('admin.plates.show');
     Route::get('/admin/plates/getAvaiblePlate', 'PlateController@getAvaiblePlate')->name('admin.plates.getAvaiblePlate');
 
 

@@ -41,6 +41,7 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Müşteri İSim Soyisim</th>
+                                    <th scope="col">Cinsiyet</th>
                                     <th scope="col">Telefon</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Durum</th>
@@ -54,6 +55,7 @@
                                     <tr>
                                         <th scope="row">{{$item->id}}</th>
                                         <td>{{$item->firstname}} {{$item->lastname}}</td>
+                                        <td>{{$item->gender == "woman" ? 'Kadın':'Erkek'}}</td>
                                         <td>
                                             ({{$item->phone_country}}) {!! str_replace($item->phone_country, ' ', $item->phone) !!}
                                          </td>

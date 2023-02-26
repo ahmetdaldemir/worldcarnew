@@ -69,7 +69,7 @@ class Plate extends Base
     }
 
 
-    public function getDropData()
+    public function getDropData(): array
     {
         $data = array(
             'checkin' => 'Müsait',

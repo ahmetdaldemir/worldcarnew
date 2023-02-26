@@ -23,6 +23,7 @@ class CreateReservationInformationsTable extends Migration
             $table->time("checkout_time");
             $table->integer("days");
             $table->integer("up_location");
+            $table->string("gender");
             $table->integer("drop_location");
             $table->json("up_drop_information");
             $table->timestamps();

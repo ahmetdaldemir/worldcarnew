@@ -35,10 +35,10 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <?php $i=1; foreach($plates as $item) { ?>
+                            <?php $i=1; foreach($plates as $item) { if($item->status != 30){ ?>
                                 <tr style="@if($item->status == 30) background:#0b93ff;color:#fff @endif">
                                     <th scope="row">{{$i}}</th>
-                                    <td style="text-align:left;">{{$item->plate}}</td>
+                                    <td style="text-align:left;"><a href="{{route('admin.admin.plates.show',['id' => $item->id])}}">{{$item->plate}}</a></td>
                                     <td style="text-align:left;text-indent: 10px;font-size: 15px"> @php
                                             $brand = \App\Models\Brand::find($item->car->brand);
                                              if($brand != null)
@@ -108,7 +108,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                           <?php $i++; } ?>
+                           <?php $i++; }} ?>
                             </tbody>
                         </table>
                     </div>

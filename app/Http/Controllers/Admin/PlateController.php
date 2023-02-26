@@ -7,12 +7,14 @@ use App\Http\Controllers\Controller;
 use App\Models\Brand;
 use App\Models\Car;
 use App\Models\CarModel;
+use App\Models\Location;
 use App\Models\Plate;
 use App\Models\PlateDocument;
 use App\Models\Reservation;
 use App\Models\ReservationInformation;
 use App\Models\ReservationPlate;
 use App\Repositories\Plate\PlateRepositoryInterface;
+use App\Repository\Data;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -112,9 +114,10 @@ class PlateController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $plates = Reservation::where('plate',$request->id)->orderBy('id','desc')->get();
+        return view('admin.plate.reservation', ['plates' => $plates]);
     }
 
     /**
@@ -163,7 +166,8 @@ class PlateController extends Controller
                 'plate' => $value,
                 'model' => $carmodel,
                 'car' =>  Brand::find($carmodel->brandid)->brandname ?? "Bulunamadı ",
-             );
+
+        );
         }
         return $data;
     }
@@ -235,4 +239,6 @@ class PlateController extends Controller
         }
         redirect()->back();
     }
+
+
 }

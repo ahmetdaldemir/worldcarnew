@@ -382,6 +382,7 @@ class ReservationController extends Controller
         $reservation_informations->email = $customer->email;
         $reservation_informations->phone = $customer->phone;
         $reservation_informations->nationality = $customer->nationality;
+        $reservation_informations->gender = $customer->gender ?? "men";
         $reservation_informations->save();
 
 

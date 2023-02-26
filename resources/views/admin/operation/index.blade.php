@@ -368,7 +368,7 @@
                                         <optgroup ng-repeat="plate in plates" label="@{{ plate.car }} @{{ plate.model.modelname }}">
                                             <option ng-repeat="item in plate.plate" ng-selected="item.id == plate" value="@{{item.id}}">
                                                 <span>@{{  item.plate}}</span> |  @{{  item.car.transmission}} |  @{{  item.car.fuel}}
-                                                | <!-- ?=$dropdata['checkout']?>-< ?=$dropdata['checkouttime']?>
+                                                @{{item.getDropData}}  | <!-- ?=$dropdata['checkout']?>-< ?=$dropdata['checkouttime']?>
                                                 | < ?=$dropdata['droplocation']?> | REZ = < ?=$dropdata['reservation_id']? -->
                                             </option>
                                         </optgroup>
