@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+     Options +FollowSymLinks  -SymLinksIfOwnerMatch
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes +FollowSymLinks
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+
+RewriteCond %{HTTP_HOST} ^https://worldcarrental.com/tr/rent-a-car/antalya/38
+RewriteRule ^(.*)$ https://worldcarrental.com/tr/rent-a-car/antalya-arac-kiralama/38 [L,R=301]

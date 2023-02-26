@@ -1,0 +1,204 @@
+.filter-list.has-banner .item {
+    overflow: hidden !important;
+}
+.filter-block .filter-items-wrapper .item {
+    overflow: hidden;
+    margin-top: 25px;
+    border: 1px solid #d6d6d6;
+    -webkit-box-shadow: -5px 0px 17px -2px rgb(0 0 0 / 30%);
+    -moz-box-shadow: -5px 0px 17px -2px rgba(0,0,0,0.3);
+    box-shadow: 10px 5px 13px 0px rgb(0 0 0 / 5%);
+    display: flex;
+    transition: All 0.3s;
+}
+
+.filter-list.has-banner a {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    width:100%
+}
+.cancelClick {
+    pointer-events: none;
+    cursor: default;
+}
+.filter-list.has-banner img {
+    width: 100%;
+}
+.filter-list.has-banner .content {
+    position: absolute;
+    top: 0.6vw;
+    left: 01vw;
+    width: 57%;
+}
+.filter-list.has-banner .content h3 {
+    font-weight: 700;
+}
+.filter-list.has-banner .content p {
+    font-size: 23px;
+    line-height: 55px;
+}
+
+
+.delivery-debit-card-boxCss{
+    border : 1px solid #062d55 !important;
+    box-shadow: 0px 1px 2px 3px #ccc;
+}
+.online-credit-card-boxCss{
+    border : 1px solid #062d55 !important;
+    box-shadow: 0px 1px 2px 3px #ccc;
+}
+.debitCash-boxCss{
+    border : 1px solid #062d55 !important;
+    box-shadow: 0px 1px 2px 3px #ccc;
+}
+.debit-boxCss{
+    border : 1px solid #062d55 !important;
+    box-shadow: 0px 1px 2px 3px #ccc;
+}
+.check-in i, .check-out i{font-size: 18px;line-height: 32px;}
+.up_drop {line-height: 32px;width: 100%;}
+@media (min-width: 768px) {.fixed-car {position: fixed!important;top: 80px;width: 360px;}}
+.check-in i{color: #78b913;}
+.check-out i{color: #fd0000;}
+.check-in {border-bottom: 1px solid #eee;padding-bottom: 5px;margin-bottom: 5px;}
+.alert-info::after {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    border: solid #08080800;
+    border-bottom-color: #ebf2f3!important;
+    content: '';
+    height: 0;
+    width: 0;
+    left: 17px;
+    top: -20px;
+    font-size: 32px;
+    border-width: 10px!important;
+}
+#mailInfo {display: none;top: 74px;z-index: 9;opacity: .9;position: absolute;}
+input:hover + #mailInfo, input:focus + #mailInfo {display: inline-block;}
+.heading {
+    font-size: 40px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    padding-left: 20px
+}
+i#popoverOption {
+    border: 1px solid #AAA;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.reservation {border-radius: 0!important;padding-top: 15px;margin-top: 20px;}
+.reservation .card {border-radius: 0;}
+
+.creditCardForm .form-card input,
+.creditCardForm .form-card textarea {
+    padding: 10px 15px 5px 15px;
+    border: none;
+    border: 1px solid lightgrey;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+.creditCardForm .form-card input:focus,
+.creditCardForm .form-card textarea:focus {
+    -moz-box-shadow: 0px 0px 0px 1.5px skyblue !important;
+    -webkit-box-shadow: 0px 0px 0px 1.5px skyblue !important;
+    box-shadow: 0px 0px 0px 1.5px skyblue !important;
+    font-weight: bold;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+.creditCardForm .input-group {
+    position: relative;
+    width: 100%;
+    overflow: hidden
+}
+
+.creditCardForm .input-group input {
+    position: relative;
+    height: 80px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-top: 30px;
+    padding-left: 25px
+}
+
+.creditCardForm .input-group label {
+    position: absolute;
+    height: 24px;
+    background: none;
+    line-height: 48px;
+    font-size: 15px;
+    color: #062d55;
+    width: 100%;
+    padding-left: 25px;
+    font-weight: 500;
+}
+
+.creditCardForm input:focus+label {
+    color: #304FFE
+}
+
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+img {
+    border-radius: 5px
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 2px solid lightgrey;
+    cursor: pointer;
+    margin: 12px 25px 12px 0px
+}
+
+.radio:hover {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2)
+}
+
+.radio.selected {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 155, 0.4);
+    border: 2px solid blue
+}
+
+.label-radio {
+    font-weight: bold;
+    color: #000000
+}
+
+.creditCardForm{
+    width: 100%;
+    display:none
+}
+
+.creditCardFormShow{
+    width: 100%;
+    display: block;
+    transition-delay: 3s;
+    transition: visibility 0s linear 1.83s, opacity 1.83s linear;
+}
+
+.inputZ{
+    margin: 0px 8px 0px -6px;z-index: 99999;position: relative;
+}

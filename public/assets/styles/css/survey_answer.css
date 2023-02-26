@@ -1,0 +1,44 @@
+table.fold-table > tbody > tr.view td,
+table.fold-table > tbody > tr.view th {
+    cursor: pointer;
+}
+table.fold-table > tbody > tr.view td:last-child,
+table.fold-table > tbody > tr.view th:last-child {
+    position: relative;
+    padding-left: 20px;
+}
+
+table.fold-table > tbody > tr.view:nth-child(4n-1) {
+    background: #eee;
+}
+table.fold-table > tbody > tr.view:hover {
+    background: #b1b1b1;
+}
+table.fold-table > tbody > tr.view.open {
+    background: #f7f7f7;
+    color: black;
+}
+table.fold-table > tbody > tr.view.open td:last-child:before,
+table.fold-table > tbody > tr.view.open th:last-child:before {
+    transform: rotate(-180deg);
+    color: #333;
+}
+table.fold-table > tbody > tr.fold {
+    display: none;
+}
+table.fold-table > tbody > tr.fold.open {
+    display: table-row;
+}
+.fold-content {
+    padding: 0.5em;
+}
+.fold-content h3 {
+    margin-top: 0;
+}
+.fold-content > table {
+    border: 2px solid #ccc;
+}
+.fold-content > table > tbody tr:nth-child(even) {
+    background: #eee;
+}
+

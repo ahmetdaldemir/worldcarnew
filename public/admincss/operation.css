@@ -1,0 +1,8 @@
+.buttonoptions {
+    width: 40px;
+    border-radius: 5px;
+    background: #dfdfdf;
+    text-align: center;
+    float: left;
+    margin: 2px;
+}

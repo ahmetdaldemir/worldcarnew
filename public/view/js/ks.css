@@ -1,0 +1,729 @@
+.kc-search {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    width: 100%
+}
+
+.kc-search-block {
+    position: relative;
+    flex: 0 0 49%;
+    min-width: 0 !important
+}
+
+.kc-label {
+    position: absolute !important;
+    bottom: 100% !important;
+    left: .2em !important;
+    margin-bottom: 10px !important;
+    font-size: .9em !important
+}
+
+.car-list-location-page .align-checkbox, .car-list-location-page .kc-label {
+    color: #fff
+}
+
+.kc-value {
+    display: flex !important;
+    align-items: center !important;
+    height: 3.5rem !important;
+    padding: 0 1.3em !important;
+    border: 1px solid #e4e8ed !important;
+    line-height: 1.25 !important;
+    color: #062d55 !important;
+    background: #f5f5f5;
+    font-size: 1rem;
+    transition: all .15s ease-in-out !important;
+    cursor: pointer !important;
+    width: 100%
+}
+
+.kc-value::before {
+    display: none !important;
+    content: "" !important;
+    margin-right: .4em !important;
+    font: normal normal normal 14px/1 FontAwesome !important;
+    font-size: 1.2em !important;
+    text-decoration: inherit !important;
+    text-rendering: optimizeLegibility !important;
+    text-transform: none !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-smoothing: antialiased !important
+}
+
+.kc-checkbox-has-end-point {
+    position: absolute !important;
+    top: 100% !important;
+    margin-top: 1.3em !important
+}
+
+.kc-dropdown {
+    width: 100% !important
+}
+
+.kc-fade-to-scale {
+    -webkit-transform-origin: top center !important;
+    transform-origin: top center !important;
+    -webkit-transform: scale(.8) !important;
+    transform: scale(.8) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all cubic-bezier(.4, 0, .2, 1) .3s !important;
+    backface-visibility: hidden !important
+}
+
+.active.kc-fade-to-scale, .kc-dropdown.active > .kc-fade-to-scale {
+    -webkit-transform: scale(.94) !important;
+    transform: scale(.96) !important;
+    opacity: 1 !important;
+    visibility: visible !important
+}
+
+.kc-datepicker, .kc-dropdown-items {position: absolute !important;
+    z-index: 10 !important;
+    left: -10px !important;
+    top: 0 !important;
+    right: -10px !important;
+    padding: 0 !important;
+    border: 1px solid #e4e8ed !important;
+    background: #fff !important;
+    margin-top: 57px;
+}
+
+.kc-dropdown-items .kc-options {
+    display: block !important;
+    max-height: 360px !important;
+    list-style: none !important;
+    padding: 0;
+    font-size: .9375em !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important
+}
+
+.kc-dropdown-items .kc-options .kc-group > ul {
+    display: none !important
+}
+
+.kc-dropdown-items .kc-options .kc-group.active > ul {
+    display: block !important;
+    padding: 0
+}
+
+.kc-dropdown-items .kc-options .kc-group:hover > .kc-heading {background: #f7f7f7;}
+.kc-dropdown-items .kc-options .kc-group > .kc-heading {
+    align-items: center !important;
+    padding: 12px 17px !important;
+    border-bottom: 1px solid #e5e9ed !important;
+    text-transform: uppercase !important;
+    font-size: 16px !important;
+    color: #062d55;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    text-align: left
+}
+
+.kc-dropdown-items .kc-options .kc-group > .kc-heading i {
+    color: #ccc7d1;
+    margin: 2px 10px 0 0;
+    font-size: 20px;
+    float: left;
+    line-height: 1
+}
+
+.kc-dropdown-items .kc-options .kc-group > .kc-heading::after {
+    display: block !important;
+    margin-left: .5em !important;
+    content: "\f0da" !important;
+    font: normal normal normal 16px/1 FontAwesome !important;
+    font-size: 1.6em !important;
+    text-decoration: inherit !important;
+    text-rendering: optimizeLegibility !important;
+    text-transform: none !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-smoothing: antialiased !important;
+    float: right
+}
+
+.kc-dropdown-items .kc-options .kc-group.active > .kc-heading::after {
+    content: "\f0dd" !important
+}
+
+.kc-dropdown-items .kc-options li > button {
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    font-size: 16px;
+    width: 100% !important;
+    font-weight: 500;
+    height: 2.875em !important;
+    color: #062d55;
+    padding: 0 15px!important;
+    border: none !important;
+    outline: 0 !important;
+    background: 0 0 !important
+}
+
+.kc-dropdown-items .kc-options li > button .svg-inline--fa {
+    margin-right: 6px;
+    color: #8a7f7f
+}
+
+.kc-dropdown-items .kc-options li > button .fa {
+    margin-right: .5em !important;
+    font-size: 1.4em !important
+}
+
+.kc-dropdown-items .kc-options li > button:focus, .kc-dropdown-items .kc-options li > button:hover {
+    background: #f7f7f7 !important
+}
+.greenLabelTextNEW {display: none;}
+.kc-dropdown-items .kc-options li.active > button {
+    background: #f7f7f7 !important;
+    color: #f9af00 !important
+}
+
+.kc-dropdown-items .kc-options::-webkit-scrollbar {
+    width: 6px !important
+}
+
+.kc-dropdown-items .kc-options::-webkit-scrollbar-track {
+    background: 0 0 !important
+}
+
+.kc-dropdown-items .kc-options::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2) !important;
+    border-radius: 10px !important
+}
+
+.kc-dropdown-items .kc-input {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+    border-bottom: 2px solid #d00027 !important;
+    font-weight: 400 !important;
+    color: #2e2e2e !important;
+    background: #fff !important;
+    transition: all .15s ease-in-out !important;
+    cursor: pointer !important
+}
+
+.kc-dropdown-items .kc-input::before {
+    display: block !important;
+    margin-left: .5em !important;
+    content: "\f2eb" !important;
+    font: normal normal normal 16px/1 FontAwesome !important;
+    font-size: 1.6em !important;
+    text-decoration: inherit !important;
+    text-rendering: optimizeLegibility !important;
+    text-transform: none !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-smoothing: antialiased !important
+}
+
+.kc-dropdown-items .kc-input input {
+    flex-grow: 1 !important;
+    width: 100% !important;
+    height: 3.5rem !important;
+    padding: 0 1.3em 0 1em !important;
+    border: 1px solid transparent !important;
+    cursor: pointer !important;
+    background: 0 0 !important
+}
+
+.kc-dropdown-items .kc-options li ul li {
+    list-style: none
+}
+
+.kc-search-date {
+    flex: 0 0 29% !important
+}
+
+.kc-search-date .kc-value {
+    border-radius: 5px 0 0 5px !important
+}
+
+.kc-search-date .kc-value::before {
+    display: block !important;
+    content: "\f15c" !important
+}
+
+.kc-search-time .kc-value::before {
+    display: block !important;
+    content: "\f18f" !important
+}
+
+.kc-search-point .kc-value::before {
+    display: block !important;
+    content: "\f3c5" !important;
+    color: #ccc7d1
+}
+
+.kc-value::after {
+    display: block !important;
+    margin-left: .5em !important;
+    content: "\f0da" !important;
+    font: normal normal normal 16px/1 FontAwesome !important;
+    font-size: 1.6em !important;
+    text-decoration: inherit !important;
+    text-rendering: optimizeLegibility !important;
+    text-transform: none !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-smoothing: antialiased !important;
+    float: right;
+    right: 15px;
+    position: absolute
+}
+
+.kc-search-time {
+    flex: 0 0 calc(21% - 5px) !important
+}
+
+.kc-search-time .kc-value {
+    margin-left: -1px !important;
+    border-radius: 0 5px 5px 0 !important
+}
+
+.kc-search-start-time {
+    margin-right: 10px !important
+}
+
+.kc-search-time .kc-dropdown-items .kc-options {
+    padding: 0 !important
+}
+
+.kc-search-time .kc-dropdown-items .kc-options li > button {
+    justify-content: center !important;
+    font-size: 1rem
+}
+
+.kc-single .kc-search-point:last-child {
+    display: none !important
+}
+
+.kc-search-point {
+    flex: 0 0 49%
+}
+.kc-search-block.kc-dropdown.kc-search-point.kc-search-start-point {
+    margin-left: -4px;
+}
+.kc-single .kc-search-point {
+    flex: 0 0 100%
+}
+
+.kc-datepicker {
+    top: 1.6em !important
+}
+
+.kc-summary {
+    display: flex !important;
+    justify-content: space-between !important
+}
+.flex-title.kc-d {
+    display: none;
+}
+.flex-title.kc-d.show {
+    display: block;
+}
+.kc-sum-date, .kc-sum-time {
+    display: flex !important;
+    align-items: center !important;
+    height: 3.5rem !important;
+    padding: 0 1.2em !important;
+    font-size: .9375em !important;
+    border: 1px solid #e4e8ed !important;
+    color: #555 !important;
+    cursor: pointer !important;
+    font-weight: 700
+}
+
+.kc-sum-date {
+    flex: 0 0 27.5% !important
+}
+
+.kc-sum-time {
+    flex: 0 0 21% !important
+}
+
+.kc-calendar .ui-datepicker {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    justify-content: space-between !important;
+    width: 100% !important
+}
+
+.kc-calendar .ui-datepicker-group {
+    flex: 0 0 100% !important
+}
+
+.kc-calendar .ui-datepicker-multi-2 .ui-datepicker-group {
+    flex: 0 0 43% !important
+}
+
+@media (max-width: 447px) {
+    .kc-calendar .ui-datepicker-multi-2 .ui-datepicker-group {
+        flex: none !important
+    }
+}
+
+.kc-calendar .ui-datepicker-row-break {
+    display: none !important
+}
+
+.kc-calendar .ui-datepicker-header {
+    display: flex !important;
+    align-items: center !important;
+    margin: 10px 0 15px !important
+}
+
+.kc-calendar .ui-datepicker-group-last .ui-datepicker-header {
+    flex-flow: row-reverse nowrap !important
+}
+
+.kc-calendar .ui-datepicker-next, .kc-calendar .ui-datepicker-prev {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 30px !important;
+    height: 30px !important;
+    border: 1px solid #e4e8ed !important;
+    border-radius: 5px !important;
+    background: #f5f5f5;
+    cursor: pointer !important;
+    transition: all .2s ease-in-out !important
+}
+
+.kc-calendar .ui-datepicker-next {
+    margin-left: 1em !important
+}
+
+.kc-calendar .ui-datepicker-prev {
+    margin-right: 1em !important
+}
+
+.kc-calendar .ui-datepicker-next .ui-icon, .kc-calendar .ui-datepicker-prev .ui-icon {
+    content: "" !important;
+    display: block !important;
+    width: .955243em !important;
+    height: 1.6em !important;
+    font-size: 8px !important;
+    background-size: 100% !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important
+}
+
+.kc-calendar .ui-datepicker-prev .ui-icon {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='37px' height='61px' viewBox='0 0 37 61' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Artboard' transform='translate(-1705.000000, -1697.000000)' fill='%23000000'%3E%3Cpath d='M1731.978,1698.714 L1707.649,1723.043 C1707.622,1723.069 1707.584,1723.077 1707.558,1723.104 C1706.412,1724.25 1705.843,1725.763 1705.847,1727.274 C1705.843,1728.785 1706.411,1730.297 1707.558,1731.444 C1707.585,1731.471 1707.622,1731.478 1707.649,1731.505 L1731.978,1755.834 C1734.263,1758.119 1738.002,1758.119 1740.286,1755.834 C1742.57,1753.549 1742.571,1749.81 1740.286,1747.526 L1720.036,1727.273 L1740.287,1707.022 C1742.572,1704.737 1742.572,1700.998 1740.287,1698.714 C1738.002,1696.43 1734.263,1696.429 1731.978,1698.714 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+}
+
+.kc-calendar .ui-datepicker-next .ui-icon {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='37px' height='61px' viewBox='0 0 37 61' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Artboard' transform='translate(-1767.000000, -1697.000000)' fill='%23000000'%3E%3Cpath d='M1777.02275,1755.83175 L1801.35175,1731.50275 C1801.37875,1731.47675 1801.41675,1731.46875 1801.44275,1731.44175 C1802.58875,1730.29575 1803.15775,1728.78275 1803.15375,1727.27175 C1803.15775,1725.76075 1802.58975,1724.24875 1801.44275,1723.10175 C1801.41575,1723.07475 1801.37875,1723.06775 1801.35175,1723.04075 L1777.02275,1698.71375 C1774.73775,1696.42875 1770.99875,1696.42875 1768.71475,1698.71375 C1766.43075,1700.99875 1766.42975,1704.73775 1768.71475,1707.02175 L1788.96575,1727.27275 L1768.71375,1747.52375 C1766.42875,1749.80875 1766.42875,1753.54775 1768.71375,1755.83175 C1770.99875,1758.11675 1774.73775,1758.11675 1777.02275,1755.83175 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+}
+
+.kc-calendar .ui-datepicker-title {
+    font-size: .9375em !important
+}
+
+.kc-calendar .ui-datepicker-year {
+    font-size: .93333em !important;
+    color: #949494
+}
+
+.kc-calendar .ui-datepicker-calendar {
+    width: 100% !important;
+    margin: 0 !important;
+    border-collapse: collapse !important
+}
+
+.kc-calendar .ui-datepicker-calendar thead tr th {
+    padding: 1em 0 !important;
+    border: 1px solid #e4e8ed !important;
+    border-left: none !important;
+    border-right: none !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-size: .725em !important;
+    font-weight: 700 !important;
+    color: #ccc !important
+}
+
+.kc-calendar .ui-datepicker-calendar tbody tr td {
+    position: relative !important;
+    padding: 0 !important;
+    border: none !important
+}
+
+.kc-calendar .ui-datepicker-calendar tbody tr td a, .kc-calendar .ui-datepicker-calendar tbody tr td span {
+    display: block !important;
+    padding: 0 !important;
+    border: 1px solid #fff !important;
+    border-top-width: 2px !important;
+    border-bottom-width: 2px !important;
+    border-radius: 5px !important;
+    text-align: center !important;
+    line-height: 36px !important;
+    font-size: 1em !important;
+    color: #2e2e2e !important;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out !important;
+    -webkit-perspective: 500px !important;
+    perspective: 500px !important;
+    background-color: #fff
+}
+
+.ui-widget.ui-widget-content {
+    border: 0 !important
+}
+
+.ui-widget-header {
+    background-color: transparent !important;
+    border: 0 !important
+}
+
+.ui-icon-circle-triangle-e, .ui-icon-circle-triangle-w {
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto !important;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.kc-calendar .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable a, .kc-calendar .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable span {
+    text-decoration: line-through !important;
+    background: 0 0 !important;
+    color: #ced4da !important;
+    cursor: not-allowed !important
+}
+
+.kc-calendar .ui-datepicker-calendar tbody tr td a:hover, .kc-calendar .ui-datepicker-calendar tbody tr td span:hover {
+    text-decoration: none !important;
+    background-color: #d00027 !important;
+    color: #fff !important
+}
+
+.kc-calendar .ui-datepicker-calendar tbody tr td.selected-day a {
+    border-radius: 0 !important;
+    background: #dc3545c9 !important;
+    color: #fff !important
+}
+
+.ui-datepicker-calendar tbody tr td.end-day a, .ui-datepicker-calendar tbody tr td.start-day a {
+    position: relative !important;
+    background-color: #d00027 !important;
+    color: #d00027 !important
+}
+
+.ui-datepicker-calendar tbody tr td.end-day a::before, .ui-datepicker-calendar tbody tr td.start-day a::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-position: center center !important;
+    background-size: 65% !important;
+    background-repeat: no-repeat !important;
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='512px' height='236px' viewBox='0 0 512 236' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Artboard' transform='translate(-1486.000000, -1861.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cg id='car' transform='translate(1742.000000, 1979.000000) scale(-1, 1) translate(-1742.000000, -1979.000000) translate(1486.000000, 1861.000000)'%3E%3Cpath d='M401.067,149.834 C377.541,149.834 358.4,168.974 358.4,192.501 C358.4,216.027 377.54,235.168 401.067,235.168 C424.593,235.168 443.734,216.028 443.734,192.501 C443.733,168.975 424.593,149.834 401.067,149.834 Z M401.067,218.101 C386.953,218.101 375.467,206.615 375.467,192.501 C375.467,178.387 386.953,166.901 401.067,166.901 C415.181,166.901 426.667,178.387 426.667,192.501 C426.667,206.615 415.181,218.101 401.067,218.101 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M110.933,149.834 C87.407,149.834 68.266,168.974 68.266,192.501 C68.266,216.027 87.406,235.168 110.933,235.168 C134.459,235.168 153.6,216.028 153.6,192.501 C153.6,168.975 134.46,149.834 110.933,149.834 Z M110.933,218.101 C96.819,218.101 85.333,206.615 85.333,192.501 C85.333,178.387 96.819,166.901 110.933,166.901 C125.047,166.901 136.533,178.387 136.533,192.501 C136.533,206.615 125.047,218.101 110.933,218.101 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M503.467,149.834 L503.467,98.634 C503.467,94.956 501.12,91.696 497.63,90.536 L449.476,74.485 C431.343,43.774 406.417,14.547 351.334,4.896 C351.232,4.879 351.129,4.862 351.027,4.845 C249.31,-9.218 172.936,13.728 123.904,73.069 C67.217,73.888 8.533,91.765 8.533,124.234 L8.533,149.834 C3.823,149.834 0,153.657 0,158.367 L0,192.5 C0,197.21 3.823,201.033 8.533,201.033 L42.666,201.033 C47.376,201.033 51.199,197.21 51.199,192.5 C51.199,159.561 77.994,132.767 110.932,132.767 C143.87,132.767 170.665,159.562 170.665,192.5 C170.665,197.21 174.488,201.033 179.198,201.033 L332.798,201.033 C337.508,201.033 341.331,197.21 341.331,192.5 C341.331,159.561 368.126,132.767 401.064,132.767 C434.003,132.767 460.797,159.562 460.797,192.5 C460.797,197.21 464.62,201.033 469.33,201.033 L503.463,201.033 C508.173,201.033 511.996,197.21 511.996,192.5 L511.996,158.367 C512,153.657 508.177,149.834 503.467,149.834 Z M392.951,37.672 C407.773,46.76 418.816,58.758 428.398,73.034 L392.618,73.034 L392.951,37.672 Z M290.133,17.9 C308.386,17.653 327.799,18.873 348.544,21.74 C358.818,23.549 367.846,26.118 375.97,29.309 L375.552,73.042 L290.133,73.042 L290.133,17.9 Z M273.067,18.626 L273.067,73.043 L146.961,73.043 C178.594,40.411 220.305,22.38 273.067,18.626 Z M494.933,183.968 L477.397,183.968 C473.139,145.619 440.533,115.701 401.066,115.701 C361.599,115.701 328.993,145.619 324.735,183.968 L187.264,183.968 C183.006,145.619 150.4,115.701 110.933,115.701 C71.466,115.701 38.86,145.619 34.602,183.968 L17.067,183.968 L17.067,166.901 C21.777,166.901 25.6,163.078 25.6,158.368 L25.6,132.768 L34.133,132.768 C38.843,132.768 42.666,128.945 42.666,124.235 C42.666,119.525 38.843,115.702 34.133,115.702 L29.713,115.702 C41.259,103.167 76.578,90.102 128,90.102 L442.342,90.102 L486.4,104.788 L486.4,115.702 L477.867,115.702 C473.157,115.702 469.334,119.525 469.334,124.235 C469.334,128.945 473.157,132.768 477.867,132.768 L486.4,132.768 L486.4,158.368 C486.4,163.078 490.223,166.901 494.933,166.901 L494.933,183.968 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important
+}
+
+.ui-datepicker-calendar tbody tr td.end-day a::before {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='512px' height='236px' viewBox='0 0 512 236' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Artboard' transform='translate(-1486.000000, -1861.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cg id='car' transform='translate(1742.000000, 1979.000000) scale(-1, 1) translate(-1742.000000, -1979.000000) translate(1486.000000, 1861.000000)'%3E%3Cpath d='M401.067,149.834 C377.541,149.834 358.4,168.974 358.4,192.501 C358.4,216.027 377.54,235.168 401.067,235.168 C424.593,235.168 443.734,216.028 443.734,192.501 C443.733,168.975 424.593,149.834 401.067,149.834 Z M401.067,218.101 C386.953,218.101 375.467,206.615 375.467,192.501 C375.467,178.387 386.953,166.901 401.067,166.901 C415.181,166.901 426.667,178.387 426.667,192.501 C426.667,206.615 415.181,218.101 401.067,218.101 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M110.933,149.834 C87.407,149.834 68.266,168.974 68.266,192.501 C68.266,216.027 87.406,235.168 110.933,235.168 C134.459,235.168 153.6,216.028 153.6,192.501 C153.6,168.975 134.46,149.834 110.933,149.834 Z M110.933,218.101 C96.819,218.101 85.333,206.615 85.333,192.501 C85.333,178.387 96.819,166.901 110.933,166.901 C125.047,166.901 136.533,178.387 136.533,192.501 C136.533,206.615 125.047,218.101 110.933,218.101 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M503.467,149.834 L503.467,98.634 C503.467,94.956 501.12,91.696 497.63,90.536 L449.476,74.485 C431.343,43.774 406.417,14.547 351.334,4.896 C351.232,4.879 351.129,4.862 351.027,4.845 C249.31,-9.218 172.936,13.728 123.904,73.069 C67.217,73.888 8.533,91.765 8.533,124.234 L8.533,149.834 C3.823,149.834 0,153.657 0,158.367 L0,192.5 C0,197.21 3.823,201.033 8.533,201.033 L42.666,201.033 C47.376,201.033 51.199,197.21 51.199,192.5 C51.199,159.561 77.994,132.767 110.932,132.767 C143.87,132.767 170.665,159.562 170.665,192.5 C170.665,197.21 174.488,201.033 179.198,201.033 L332.798,201.033 C337.508,201.033 341.331,197.21 341.331,192.5 C341.331,159.561 368.126,132.767 401.064,132.767 C434.003,132.767 460.797,159.562 460.797,192.5 C460.797,197.21 464.62,201.033 469.33,201.033 L503.463,201.033 C508.173,201.033 511.996,197.21 511.996,192.5 L511.996,158.367 C512,153.657 508.177,149.834 503.467,149.834 Z M392.951,37.672 C407.773,46.76 418.816,58.758 428.398,73.034 L392.618,73.034 L392.951,37.672 Z M290.133,17.9 C308.386,17.653 327.799,18.873 348.544,21.74 C358.818,23.549 367.846,26.118 375.97,29.309 L375.552,73.042 L290.133,73.042 L290.133,17.9 Z M273.067,18.626 L273.067,73.043 L146.961,73.043 C178.594,40.411 220.305,22.38 273.067,18.626 Z M494.933,183.968 L477.397,183.968 C473.139,145.619 440.533,115.701 401.066,115.701 C361.599,115.701 328.993,145.619 324.735,183.968 L187.264,183.968 C183.006,145.619 150.4,115.701 110.933,115.701 C71.466,115.701 38.86,145.619 34.602,183.968 L17.067,183.968 L17.067,166.901 C21.777,166.901 25.6,163.078 25.6,158.368 L25.6,132.768 L34.133,132.768 C38.843,132.768 42.666,128.945 42.666,124.235 C42.666,119.525 38.843,115.702 34.133,115.702 L29.713,115.702 C41.259,103.167 76.578,90.102 128,90.102 L442.342,90.102 L486.4,104.788 L486.4,115.702 L477.867,115.702 C473.157,115.702 469.334,119.525 469.334,124.235 C469.334,128.945 473.157,132.768 477.867,132.768 L486.4,132.768 L486.4,158.368 C486.4,163.078 490.223,166.901 494.933,166.901 L494.933,183.968 Z' id='Shape' transform='translate(255.998002, 100.932972) scale(-1, 1) translate(-255.998002, -100.932972) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important
+}
+
+.ui-datepicker-calendar tbody tr td.start-day a {
+    border-radius: 10px 0 0 10px !important
+}
+
+.ui-datepicker-calendar tbody tr td.end-day a {
+    border-radius: 0 10px 10px 0 !important
+}
+
+.tooltip-inner {
+    padding: .4rem .8rem !important;
+    font-size: .875em !important;
+    background-color: #fff !important;
+    color: #06294b;
+    border: 1px solid #06294b !important
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+    border-top-color: #06294b !important
+}
+
+.kc-mobile-header {
+    display: none !important;
+    flex-flow: row nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 .5em !important;
+    border-bottom: 1px solid #e6eaee !important;
+    flex: 0 0 3.5em !important
+}
+
+.kc-mobile-header .kc-title {
+    font-size: 1em !important;
+    font-weight: 600 !important;
+    display: block !important;
+}
+
+.kc-mobile-header .kc-close {
+    margin: -.5em -1em !important;
+    padding: .5em 1em !important;
+    font-size: 1.8em !important;
+    cursor: pointer !important
+}
+.kc-group.active {
+    border-bottom: 1px solid #DDD;
+}
+@media only screen and (max-width: 1199px) {
+    .kc-checkbox-has-end-point {
+        position: static !important;
+        top: auto !important;
+        margin-top: 1em !important
+    }
+}
+
+@media (max-width: 768px) {
+.kc-datepicker, .kc-dropdown-items {
+    margin-top: 110px;
+}
+}
+@media only screen and (max-width: 560px) {
+    body.kc-modal-open {
+        overflow-y: hidden !important
+    }
+
+    .kc-mobile-header {
+        display: flex !important
+    }
+
+    .kc-search-block {
+        position: static !important
+    }
+
+    .kc-label {
+        position: static !important;
+        bottom: auto !important;
+        left: auto !important;
+        margin-left: .2em !important;
+        margin-bottom: 10px !important;
+        margin-top: -2.15em !important;
+        font-size: .95em !important;
+        font-weight: 700
+    }
+
+    .kc-datepicker, .kc-dropdown-items {
+        display: flex !important;
+        flex-flow: column nowrap !important;
+        position: fixed !important;
+        z-index: 101 !important;
+        height: 30% !important;
+        height: 90vh !important;
+        padding: 10px !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: #fff !important
+    }
+
+    .kc-dropdown-items:not(.kc-datepicker):not(.kc-dropdown-items-city) {
+        bottom: 0 !important;
+        height: 70vh !important
+    }
+
+    .kc-dropdown-items .kc-options {
+        width: 100% !important;
+        flex-basis: 0 !important;
+        flex-grow: 1 !important;
+        max-height: none !important
+    }
+
+    .kc-dropdown-items .kc-options li > button {
+        height: 3em !important
+    }
+
+    .kc-dropdown-items .kc-input {
+        width: 100% !important;
+        flex: 0 0 3.5em !important
+    }
+
+    .kc-search-end-date, .kc-search-end-point, .kc-search-end-time {
+        margin-top: 4em !important;
+        margin-bottom: 1em !important
+    }
+
+    .kc-search-date {
+        flex: 0 0 55% !important
+    }
+
+    .kc-search-time {
+        flex: 0 0 45% !important
+    }
+
+    .kc-search-start-time {
+        margin-right: 0 !important
+    }
+
+    .kc-calendar {
+        overflow: auto !important;
+        -webkit-overflow-scrolling: touch !important
+    }
+
+    .kc-calendar .ui-datepicker {
+        padding: 0 .5em !important
+    }
+
+    .kc-summary {
+        display: none !important
+    }
+
+    .kc-calendar .ui-datepicker-group {
+        margin-bottom: 1em !important
+    }
+
+    .kc-calendar .ui-datepicker-group-last .ui-datepicker-header {
+        flex-flow: row nowrap !important
+    }
+
+    .kc-calendar .ui-datepicker-next, .kc-calendar .ui-datepicker-prev {
+        display: none !important
+    }
+
+    .kc-calendar .ui-datepicker-title {
+        font-size: 1em !important
+    }
+
+    .kc-calendar .ui-datepicker-calendar tbody tr td a, .kc-calendar .ui-datepicker-calendar tbody tr td span {
+        font-size: 1em !important;
+        line-height: 48px !important
+    }
+
+    .search-module .actions-block {
+        width: 100% !important
+    }
+
+    .search-module .actions-block .action-col {
+        width: 100% !important
+    }
+
+    .kc-search .actions-block .submit button {
+        width: 100% !important
+    }
+}
+
+.kc-calendar .ui-datepicker-calendar thead tr th {
+    color: #555 !important;
+    font-weight: 800 !important
+}
+
+.search-block .kc-label, .search-block label {
+    color: #555;
+    font-weight: 700
+}
+
+.has-stick .checkbox-label, .has-stick .kc-label {
+    color: #fff
+}

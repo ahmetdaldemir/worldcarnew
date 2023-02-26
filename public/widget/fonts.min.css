@@ -1,0 +1,452 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?lrynq9');
+  src:  url('../fonts/icomoon.eot?lrynq9#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?lrynq9') format('truetype'),
+    url('../fonts/icomoon.woff?lrynq9') format('woff'),
+    url('../fonts/icomoon.svg?lrynq9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icons-"], [class*=" icons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icons-abs-light:before {
+  content: "\e900";
+}
+.icons-airbag:before {
+  content: "\e901";
+}
+.icons-air-conditioner:before {
+  content: "\e902";
+}
+.icons-atm:before {
+  content: "\e903";
+}
+.icons-babyseat:before {
+  content: "\e904";
+}
+.icons-birthday:before {
+  content: "\e905";
+}
+.icons-box:before {
+  content: "\e906";
+}
+.icons-calendar:before {
+  content: "\e907";
+}
+.icons-calendar2:before {
+  content: "\e908";
+}
+.icons-car:before {
+  content: "\e909";
+}
+.icons-carclass:before {
+  content: "\e90a";
+}
+.icons-car-door:before {
+  content: "\e90b";
+}
+.icons-car-engine:before {
+  content: "\e90c";
+}
+.icons-car-information:before {
+  content: "\e90d";
+}
+.icons-carnet:before {
+  content: "\e90e";
+}
+.icons-cars:before {
+  content: "\e90f";
+}
+.icons-cd:before {
+  content: "\e910";
+}
+.icons-chaincar:before {
+  content: "\e911";
+}
+.icons-checkmark:before {
+  content: "\e912";
+}
+.icons-clock:before {
+  content: "\e913";
+}
+.icons-close:before {
+  content: "\e914";
+}
+.icons-co2:before {
+  content: "\e915";
+}
+.icons-comment:before {
+  content: "\e916";
+}
+.icons-complate:before {
+  content: "\e917";
+}
+.icons-contract:before {
+  content: "\e918";
+}
+.icons-drive:before {
+  content: "\e919";
+}
+.icons-edit:before {
+  content: "\e91a";
+}
+.icons-email:before {
+  content: "\e91b";
+}
+.icons-eye:before {
+  content: "\e91c";
+}
+.icons-facebook:before {
+  content: "\e91d";
+}
+.icons-facebook-login:before {
+  content: "\e91e";
+}
+.icons-filter:before {
+  content: "\e91f";
+}
+.icons-flag-ar .path1:before {
+  content: "\e920";
+  color: rgb(109, 165, 68);
+}
+.icons-flag-ar .path2:before {
+  content: "\e921";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icons-flag-ar .path3:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icons-flag-ar .path4:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icons-flag-ar .path5:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icons-flag-ar .path6:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icons-flag-ar .path7:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icons-flag-de .path1:before {
+  content: "\e927";
+  color: rgb(255, 218, 68);
+}
+.icons-flag-de .path2:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icons-flag-de .path3:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icons-flag-en .path1:before {
+  content: "\e92a";
+  color: rgb(240, 240, 240);
+}
+.icons-flag-en .path2:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-en .path3:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-en .path4:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-en .path5:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-en .path6:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-en .path7:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-en .path8:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-en .path9:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-en .path10:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icons-flag-en .path11:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icons-flag-en .path12:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icons-flag-en .path13:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icons-flag-en .path14:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icons-flag-fr .path1:before {
+  content: "\e938";
+  color: rgb(240, 240, 240);
+}
+.icons-flag-fr .path2:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icons-flag-fr .path3:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-nl .path1:before {
+  content: "\e93b";
+  color: rgb(240, 240, 240);
+}
+.icons-flag-nl .path2:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(162, 0, 29);
+}
+.icons-flag-nl .path3:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-ru .path1:before {
+  content: "\e93e";
+  color: rgb(240, 240, 240);
+}
+.icons-flag-ru .path2:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.icons-flag-ru .path3:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.icons-flag-tr .path1:before {
+  content: "\e941";
+  color: rgb(216, 0, 39);
+}
+.icons-flag-tr .path2:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icons-flag-tr .path3:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.icons-fuel:before {
+  content: "\e944";
+}
+.icons-gear:before {
+  content: "\e945";
+}
+.icons-google-login:before {
+  content: "\e946";
+}
+.icons-hamburgermenu:before {
+  content: "\e947";
+}
+.icons-headphone:before {
+  content: "\e948";
+}
+.icons-hgs:before {
+  content: "\e949";
+}
+.icons-icon-login:before {
+  content: "\e94a";
+}
+.icons-information:before {
+  content: "\e94b";
+}
+.icons-instagram:before {
+  content: "\e94c";
+}
+.icons-kasko:before {
+  content: "\e94d";
+}
+.icons-language:before {
+  content: "\e94e";
+}
+.icons-left-arrow:before {
+  content: "\e94f";
+}
+.icons-linkedin:before {
+  content: "\e950";
+}
+.icons-login:before {
+  content: "\e951";
+}
+.icons-mail:before {
+  content: "\e952";
+}
+.icons-map-marker:before {
+  content: "\e953";
+}
+.icons-menubar:before {
+  content: "\e954";
+}
+.icons-mhs:before {
+  content: "\e955";
+}
+.icons-more:before {
+  content: "\e956";
+}
+.icons-motor:before {
+  content: "\e957";
+}
+.icons-navigation:before {
+  content: "\e958";
+}
+.icons-petrol:before {
+  content: "\e959";
+}
+.icons-phone:before {
+  content: "\e95a";
+}
+.icons-photo:before {
+  content: "\e95b";
+}
+.icons-plane:before {
+  content: "\e95c";
+}
+.icons-question:before {
+  content: "\e95d";
+}
+.icons-right-arrow:before {
+  content: "\e95e";
+}
+.icons-rss:before {
+  content: "\e95f";
+}
+.icons-search:before {
+  content: "\e960";
+}
+.icons-search2:before {
+  content: "\e961";
+}
+.icons-seat:before {
+  content: "\e962";
+}
+.icons-stroller:before {
+  content: "\e963";
+}
+.icons-sunroof:before {
+  content: "\e964";
+}
+.icons-tag:before {
+  content: "\e965";
+}
+.icons-team:before {
+  content: "\e966";
+}
+.icons-travel:before {
+  content: "\e967";
+}
+.icons-user .path1:before {
+  content: "\e968";
+  color: rgb(255, 187, 133);
+}
+.icons-user .path2:before {
+  content: "\e969";
+  margin-left: -1em;
+  color: rgb(106, 169, 255);
+}
+.icons-user .path3:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: rgb(245, 168, 108);
+}
+.icons-user .path4:before {
+  content: "\e96b";
+  margin-left: -1em;
+  color: rgb(38, 130, 255);
+}
+.icons-user-plus:before {
+  content: "\e96c";
+}
+.icons-users:before {
+  content: "\e96d";
+}
+.icons-warning:before {
+  content: "\e96e";
+}
+.icons-whatsapp .path1:before {
+  content: "\e96f";
+  color: rgb(236, 239, 241);
+}
+.icons-whatsapp .path2:before {
+  content: "\e970";
+  margin-left: -1em;
+  color: rgb(76, 175, 80);
+}
+.icons-whatsapp .path3:before {
+  content: "\e971";
+  margin-left: -1em;
+  color: rgb(250, 250, 250);
+}
+.icons-wifi:before {
+  content: "\e972";
+}
+.icons-youtube:before {
+  content: "\e973";
+}

@@ -1,0 +1,54 @@
+.hour-select {
+    min-width: 280px;
+    padding: 7px 14px 0;
+    right: -161px;
+    height: 210px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+@media (min-width: 768px)
+{
+.hour-select {
+        position: absolute;
+        background-color: #353535;
+        box-shadow: 0 0 15px #000;
+        border: 1px solid #fff;
+    }
+ .hour-select .hour-items {
+        padding: 7px 10px;
+    }
+}
+
+  .datepicker-wrapper, .rent-card .hour-select {
+        top: 100%;
+        background-color: #121212;
+        z-index: 3;
+    }
+
+  .hour-select .hour-items {
+        display: flex;
+        align-items: center;
+        padding: 8.5px 10px;
+    }
+
+.hour-select .hour-items .hour-item.disabled {
+    opacity: .4;
+    cursor: default;
+}
+.hour-select .hour-items .hour-item.disabled {
+    opacity: .4;
+    cursor: default;
+}
+
+    .hour-select .hour-items .hour-item {
+        flex: 1 1 50%;
+        max-width: 50%;
+        text-align: center;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        user-select: none;
+        transition: ease all .3s;
+    }

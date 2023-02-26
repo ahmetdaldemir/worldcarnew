@@ -1,0 +1,23 @@
+var OnlinePayment=function(){var objKey=null;var statuses={sending:false,waitingSecureForm:false,waitingSecureResponse:false,};var params={form:{url:null,card:{number:null,holderName:null,month:null,year:null,secureCode:null,},otherData:{}}};var doms={form:null,button:null,modal:null,modalForm:null,securePaymentIframe:null,};var actions={send:function(){if(formValidation()===false||statuses.sending){return;}
+$.ajax({method:'post',data:{card:params.form.card,meta:params.form.otherData,objKey:objKey},dataType:'json',beforeSend:function(){doms.button.addClass('disabled').prop('disabled',true);statuses.sending=true;},complete:function(){doms.button.removeClass('disabled').prop('disabled',false);statuses.sending=false;},success:function(response){if(response.status==='error'){toastr.error(response.message,'Hata');}
+if(response.data.mode==='3D-Validation'){actions.openModal();var modalContent='<iframe style="width: 100%; height: 450px;" id="iframe-secure-payment" name="iframe-secure-payment"></iframe>'+
+response.data.form_content;$('.modal-body',doms.modal).html(modalContent);doms.securePaymentIframe=$('[name="iframe-secure-payment"]',doms.modal);doms.modalForm=$('[name="form-secure-payment"]',doms.modal);actions.sendModalForm();statuses.waitingSecureForm=true;actions.addModalLoader('Bankadan güvenli ödeme formu bekleniyor');doms.securePaymentIframe.load(function(){if(statuses.waitingSecureForm&&!statuses.waitingSecureResponse){statuses.waitingSecureForm=false;actions.removeModalLoader();}
+else if(!statuses.waitingSecureForm&&!statuses.waitingSecureResponse){statuses.waitingSecureResponse=true;actions.addModalLoader('Güvenli ödeme doğrulaması yapılıyor');}});}
+else if(response.status==='success'){toastr.success(response.message,'Başarılı');setTimeout(function(){document.location.reload();},5000);}},error:function(request){console.log(request);}})},openModal:function(){doms.modal.modal('show');},closeModal:function(){doms.modal.modal('hide');$('.modal-body',doms.modal).html('');},addModalLoader:function(text){$('.modal-body',doms.modal).append('<div class="modal-body-loader" style="position: absolute; z-index: 99; width: 100%; height: 100%; top: 0; left: 0; background: #fff;">'+
+'<h3 style="display: block; text-align: center;">'+text+'</h3>'+
+'</div>');},removeModalLoader:function(){$('.modal-body-loader',doms.modal).remove();},sendModalForm:function(){doms.modalForm.submit();},secureFormResponse:function(response){statuses.waitingSecureResponse=false;actions.removeModalLoader();if(response.status){toastr.success(response.message);actions.closeModal();document.location.reload();}else{toastr.warning(response.message);}}};var formValidation=function(){var messages=[];if(params.form.card.number===''||params.form.card.number===null){messages.push('Kart no eksik');}
+if(params.form.card.holderName===''||params.form.card.holderName===null){messages.push('Ad Soyad eksik');}
+if(params.form.card.month===''||params.form.card.month===null){messages.push('Ay eksik');}
+if(params.form.card.year===''||params.form.card.year===null){messages.push('Yıl eksik');}
+if(params.form.card.secureCode===''||params.form.card.secureCode===null){messages.push('Güvenlik kodu eksik');}
+messages.forEach(function(message){toastr.warning(message);});return messages.length===0;};var readCardFormInput=function(dom){params.form.card[dom.attr('name')]=dom.val();};this.send=function(){actions.send();};this.register=function(registerParams){objKey=registerParams.obj;doms.form=$(registerParams.formSelector);doms.button=$(registerParams.buttonSelector);doms.button.attr('onclick',registerParams.obj+'.send();');params.form.url=registerParams.formUrl;params.form.otherData=registerParams.formData;$('body').append('<div class="modal fade" id="modal-online-payment-'+registerParams.obj+'" tabindex="-1" role="dialog" aria-hidden="true">\n'+
+'    <div class="modal-dialog">\n'+
+'        <div class="modal-content">\n'+
+'            <div class="modal-header">\n'+
+'                <h4 class="modal-title">3D Güvenli Ödeme <span class="btn btn-xs btn-icon-standalone btn-gray pull-right" data-dismiss="modal"><i class="fa-times"></i></span></h4>\n'+
+'            </div>\n'+
+'            <div class="modal-body position-relative">\n'+
+'            </div>\n'+
+'        </div>\n'+
+'    </div>\n'+
+'</div>');$('input, select',doms.form).change(function(){readCardFormInput($(this));}).change();doms.modal=$('#modal-online-payment-'+registerParams.obj);window.onmessage=function(event){console.log(event.data);actions.secureFormResponse(event.data);};};};

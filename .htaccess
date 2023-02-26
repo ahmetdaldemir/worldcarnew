@@ -1,0 +1,159 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_URI} !^public
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+RewriteEngine On
+Options Indexes SymLinksIfOwnerMatch
+
+RewriteCond %{HTTP_HOST} ^www.worldcarrental.com [NC]
+RewriteRule ^(.*)$ http://worldcarrental.com/$1 [L,R=301,NC]
+
+RewriteCond %{HTTP_HOST} ^m.worldcarrental.com [NC]
+RewriteRule ^(.*)$ http://m.worldcarrental.com/$1 [L,R=301,NC]
+
+ # Handle Authorization Header
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Redirect Trailing Slashes If Not A Folder...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+# Handle Front Controller...
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(css|js|images)/(.*)$ public/$1/$2 [L,NC]
+
+ 
+# Redirect...
+
+redirect 301 /tr/rent-a-car/antalya/38 https://worldcarrental.com/tr/rent-a-car/antalya-arac-kiralama/38
+
+redirect 301 /tr/rent-a-car/antalya-havalimani-rent-a-car-arac-kiralama/48 https://worldcarrental.com/tr/rent-a-car/antalya-havalimani-arac-kiralama/48
+
+redirect 301 /tr/arac-kiralama/motorsiklet-kiralama/14 https://worldcarrental.com/tr/arac-kiralama/antalya-motorsiklet-kiralama/14
+
+redirect 301 /tr/arac-kiralama/lux-luks-arac-kiralama/65 https://worldcarrental.com/tr/arac-kiralama/antalya-luks-arac-kiralama/65
+
+redirect 301 /tr/arac-kiralama/gunluk-turlar-geziler/15 https://worldcarrental.com/tr/arac-kiralama/alanya-turlari-ve-gunubirlik-geziler/15
+
+redirect 301 /tr/rent-a-car/alanya-arac-kiralama/42 https://worldcarrental.com/tr/rent-a-car/antalya-alanya-arac-kiralama/42
+
+redirect 301 /tr/rent-a-car/belek-arac-kiralama/43 https://worldcarrental.com/tr/rent-a-car/antalya-belek-arac-kiralama/43
+
+redirect 301 /tr/rent-a-car/okurcalar-arac-kiralama/51 https://worldcarrental.com/tr/rent-a-car/alanya-okurcalar-arac-kiralama/51
+
+redirect 301 /tr/rent-a-car/arac-kiralama-gazipasa-havalimani/91 https://worldcarrental.com/tr/rent-a-car/alanya-gazipasa-havalimani-arac-kiralama/91
+
+redirect 301 /tr/arac-kiralama/gunluk-arac-kiralama/9 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/aylik-arac-kiralama/10 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/uzun-donem-arac-kiralama/11 https://worldcarrental.com/tr
+
+redirect 301 /tr/rent-a-car/gazipasa/50 https://worldcarrental.com/tr/rent-a-car/alanya-gazipasa-havalimani-arac-kiralama/91
+
+redirect 301 /tr/rent-a-car/demirtas-arac-kiralama-rent-a-car/60 https://worldcarrental.com/tr/rent-a-car/antalya-alanya-arac-kiralama/42
+
+redirect 301 /tr/rent-a-car/alanya-turkler-arac-kiralama/54 https://worldcarrental.com/tr/rent-a-car/antalya-alanya-arac-kiralama/42
+
+redirect 301 /tr/rent-a-car/konakli-arac-kiralama-rent-a-car/55 https://worldcarrental.com/tr/rent-a-car/antalya-alanya-arac-kiralama/42
+
+redirect 301 /tr/rent-a-car/antalya-kaleici-arac-kiralama/63 https://worldcarrental.com/tr/rent-a-car/antalya-arac-kiralama/38
+
+redirect 301 /tr/rent-a-car/belek-kadriye-arac-kiralama/65 https://worldcarrental.com/tr/rent-a-car/antalya-belek-arac-kiralama/43
+
+redirect 301 /tr/rent-a-car/side-gundogdu-arac-kiralama/66 https://worldcarrental.com/tr/rent-a-car/side-arac-kiralama/67
+
+redirect 301 /tr/rent-a-car/side-colakli-arac-kiralama/68 https://worldcarrental.com/tr/rent-a-car/side-arac-kiralama/67
+
+redirect 301 /tr/rent-a-car/kemer-beldibi-arac-kiralama/75 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/kemer-kiris-arac-kiralama/77 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/side-arac-kiralama/67 https://worldcarrental.com/tr/rent-a-car/antalya-side-arac-kiralama/67
+
+redirect 301 /tr/rent-a-car/alanya-incekum-arac-kiralama/52 https://worldcarrental.com/tr/rent-a-car/avsallar-araba-kiralama/53
+
+redirect 301 /tr/rent-a-car/belek-bogazkent-arac-kiralama/64 https://worldcarrental.com/tr/rent-a-car/antalya-belek-arac-kiralama/43
+
+redirect 301 /tr/rent-a-car/kemer-cirali-arac-kiralama/82 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/kemer-beldibi-arac-kiralama/75 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/kemer-goynuk-arac-kiralama/76 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/kemer-kiris-arac-kiralama/77 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/kemer-camyuva-arac-kiralama/78 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/kemer-tekirova-arac-kiralama/79 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/kemer-olimpos-arac-kiralama/80 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/kemer-adrasan-arac-kiralama/81 https://worldcarrental.com/tr/rent-a-car/antalya-kemer-arac-kiralama/124
+
+redirect 301 /tr/rent-a-car/side-sorgun-arac-kiralama/74 https://worldcarrental.com/tr/rent-a-car/antalya-side-arac-kiralama/67
+
+redirect 301 /tr/rent-a-car/side-evrenseki-arac-kiralama/73 https://worldcarrental.com/tr/rent-a-car/antalya-side-arac-kiralama/67
+
+redirect 301 /tr/rent-a-car/side-kizilagac-arac-kiralama/71 https://worldcarrental.com/tr/rent-a-car/antalya-side-arac-kiralama/67
+
+redirect 301 /en/rent-a-car/gazipasa/50 https://worldcarrental.com/tr/rent-a-car/alanya-gazipasa-havalimani-arac-kiralama/91
+
+redirect 301 /tr/arac-kiralama/suzuki-samurai-jeep-kiralama/82 https://worldcarrental.com/tr/arac-kiralama/antalya-luks-arac-kiralama/65
+
+redirect 301 /tr/arac-kiralama/auto-huren-turkije-nl/54 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/antalya-kundu-otelleri-rent-a-car/51 https://worldcarrental.com/tr/rent-a-car/antalya-arac-kiralama/38
+
+redirect 301 /tr/arac-kiralama/alanya-otelleri-rent-a-car/63 https://worldcarrental.com/tr/rent-a-car/antalya-alanya-arac-kiralama/42
+
+redirect 301 /tr/kurumsal/kurumsal https://worldcarrental.com/tr/arac-kiralama/kurumsal/6
+
+redirect 301 /tr/arac-kiralama/kabrio-cabrio-cabriolet-kiralama/87 https://worldcarrental.com/tr/arac-kiralama/antalya-luks-arac-kiralama/65
+
+redirect 301 /tr/arac-kiralama/rent-a-car-turkiye-tr/53 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/ford-focus-kiralama/75 https://worldcarrental.com/tr
+
+redirect 301 /tr/ara%C3%A7-kiralama-kampanya/suzuki-ile-ozgurlugu-yasa/3 https://worldcarrental.com/tr/arac-kiralama/antalya-luks-arac-kiralama/65
+
+redirect 301 /tr/arac-kiralama/car-rental-rent-a-car-turkey-en/60 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/fiat-doblo-kiralama/80 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/antalya-kundu-otelleri/51 https://worldcarrental.com/tr/rent-a-car/antalya-arac-kiralama/38
+
+redirect 301 /tr/arac-kiralama/auto-mieten-mietwagen-de/59 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/suzuki-jimny-kiralama/83 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/hyundai-accent-blue-kiralama/78 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/ford-tourneo-courier-kiralama/79 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/biludlejning-i-tyrkiet-dk/55 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/akdeniz-otelleri/42 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/antalya-lara-otelleri-rent-a-car/42 https://worldcarrental.com/tr
+
+redirect 301 /tr/arac-kiralama/antalya-havalimani/64 https://worldcarrental.com/tr/rent-a-car/antalya-havalimani-arac-kiralama/48
+
+redirect 301 /tr/arac-kiralama/suv-arac-kiralama/50 https://worldcarrental.com/tr/arac-kiralama/antalya-luks-arac-kiralama/65
+
+redirect 301 /tr/arac-kiralama/antalya-lara-otelleri/42 https://worldcarrental.com/tr
+
+redirect 301 /tr/ara%C3%A7-kiralama-kampanya/son-dakika-indirimi/10 https://worldcarrental.com/tr
+
+redirect 301 /tr/ara%C3%A7-kiralama-kampanya/otomatik-vites-rahatligini-yasayin/2 https://worldcarrental.com/tr
