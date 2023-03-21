@@ -15,6 +15,7 @@ use App\Models\ReservationInformation;
 use App\Models\ReservationPlate;
 use App\Repositories\Plate\PlateRepositoryInterface;
 use App\Repository\Data;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -39,10 +40,10 @@ class PlateController extends Controller
 //        $plates = Plate::where("status", '!=', Plate::PLATE_STATUS_ARCHIVE)->with(['car' => function ($q){
 //            $q->orderBy('id');
 //        }])->get();
-        $plates =   Plate::get()->sortBy(function($query){
+        $plates = Plate::get()->sortBy(function ($query) {
             return $query->car->brand;
         })->all();
-         return view('admin.plate.index', ['plates' => $plates]);
+        return view('admin.plate.index', ['plates' => $plates]);
     }
 
     public function archive()
@@ -116,7 +117,7 @@ class PlateController extends Controller
      */
     public function show(Request $request)
     {
-        $plates = Reservation::where('plate',$request->id)->orderBy('id','desc')->get();
+        $plates = Reservation::where('plate', $request->id)->orderBy('id', 'desc')->get();
         return view('admin.plate.reservation', ['plates' => $plates]);
     }
 
@@ -158,19 +159,37 @@ class PlateController extends Controller
     public function getAvaiblePlate(Request $request)
     {
         $reservartion = Reservation::find($request->id);
-        $reservationInformation = ReservationInformation::where('id_reservation',$request->id)->first();
+        $reservationInformation = ReservationInformation::where('id_reservation', $request->id)->first();
         $plates = $this->plateRepository->getAvaibleAll($reservartion);
         foreach ($plates as $key => $value) {
-            $carmodel =  CarModel::find($key);
+            $carmodel = CarModel::find($key);
             $data[] = array(
                 'plate' => $value,
                 'model' => $carmodel,
-                'car' =>  Brand::find($carmodel->brandid)->brandname ?? "Bulunamadı ",
+                'car' => Brand::find($carmodel->brandid)->brandname ?? "Bulunamadı ",
 
-        );
+            );
         }
         return $data;
     }
+
+    public function report(Request $request)
+    {
+
+        $plates = "";
+        $data = "";
+        if (isset($request->startdate)) {
+
+            $startDate = Carbon::parse($request->startdate)->format('Y-m-d');
+            $endDate = Carbon::parse($request->finishdate)->format('Y-m-d');
+            $plates = Reservation::where('plate', $request->plate)->whereBetween('created_at', [$startDate, $endDate])->orderBy('id', 'desc')->get();
+            $data = $request;
+        }
+        $platelist = $this->plateRepository->all();
+        return view('admin.plate.report', ['plates' => $plates, 'platelist' => $platelist,'data' => $data]);
+    }
+
+
     /**
      * Update the specified resource in storage.
      *

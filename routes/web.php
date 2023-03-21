@@ -232,6 +232,7 @@ Route::group(['prefix' => '/admin', 'namespace' => 'Admin', 'as' => 'admin.'], f
     Route::get('/admin/plates/get', 'PlateController@get')->name('admin.plates.get');
     Route::get('/admin/plates/show', 'PlateController@show')->name('admin.plates.show');
     Route::get('/admin/plates/getAvaiblePlate', 'PlateController@getAvaiblePlate')->name('admin.plates.getAvaiblePlate');
+    Route::get('/admin/plates/report', 'PlateController@report')->name('admin.plates.report');
 
 
     Route::get('/admin/language', 'LanguageController@index')->name('admin.language');

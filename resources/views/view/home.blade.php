@@ -314,7 +314,7 @@ use App\Models\Image;use Illuminate\Support\Facades\Session;use Symfony\Componen
                                             <div class="member-deals__wrapper active">
                                                 <div class="member-deals__wrapper-item">
                                                     <div class="LazyLoad is-visible member-deals__img-wrapper">
-                                                        <img src="{{asset('storage/'.$item->image.'')}}"  class="img-fluid card-img" style="height: 100%" alt="{{$item->title}}">
+                                                        <img src="{{asset('storage/webp/'.\App\Models\Destination::getimages($item->id)->title.'')}}"  class="img-fluid card-img" style="height: 100%" alt="{{$item->title}}">
                                                     </div>
                                                     <h3 class="h3_whs-nowrap" itemprop="name">{{$item->title}}</h3>
                                                 </div>
@@ -554,15 +554,10 @@ use App\Models\Image;use Illuminate\Support\Facades\Session;use Symfony\Componen
         <div class="blog-gray-bg more-text">
             <div class="auto-container" style="border-top: 1px solid #cfcfcf;padding-top: 20px!important">
                 <div class="col-12">
-                    <h2>{{__('homeTitle')}}</h2>
-                    <p>{{__('homeText1')}}</p>
-                    <p class="morehide">{{__('homeText2')}}</p>
-                    <p class="morehide">{{__('homeText3')}}</p>
-                    <p class="morehide">{{__('homeText4')}}</p>
-                    <p class="morehide">{{__('homeText5')}}</p>
-                    <p class="morehide">{{__('homeText6')}}</p>
-                    <h3>{{__('homeText7Title')}}</h3>
-                    <p class="morehide">{{__('homeText7Value')}}</p>
+                    <h2>{!! __('newtext1') !!}</h2>
+                    <p>{!! __('newtext2') !!}</p>
+                    <h2>{{__('newtext3')}}</h2>
+                    <p class="morehide">{!! __('newtext4') !!}</p>
                     <button class="more" onclick="more()">{{__('homeTextBtn')}}</button>
                 </div>
             </div>

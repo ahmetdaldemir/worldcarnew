@@ -95,7 +95,30 @@
                 timePicker: false,
                 locale: {
                     format: 'DD-MM-YYYY'
-                }
+                },
+                "daysOfWeek": [
+                    "Pt",
+                    "Sl",
+                    "Çr",
+                    "Pr",
+                    "Cm",
+                    "Ct",
+                    "Pz"
+                ],
+                "monthNames": [
+                    "Ocak",
+                    "Şubat",
+                    "Mart",
+                    "Nisan",
+                    "Mayıs",
+                    "Haziran",
+                    "Temmuz",
+                    "Ağustos",
+                    "Eylül",
+                    "Ekim",
+                    "Kasım",
+                    "Aralık"
+                ],
             });
         });
 
@@ -372,7 +395,7 @@ $currencys = $currency::where('left_icon', "!=", 'TRY')->get();
             <!-- User avatar dropdown -->
             <div class="dropdown">
                 <div class="user col align-self-end">
-                    <img src="{{ asset('/public/assets/images/faces/profilmail.jpeg') }}" id="userDropdown" alt=""  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="{{ asset('/public/assets/images/faces/16.jpg') }}" id="userDropdown" alt=""  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Merhaba, {{Auth::user()->name}}
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <div class="dropdown-header">
@@ -539,7 +562,12 @@ $currencys = $currency::where('left_icon', "!=", 'TRY')->get();
                         <span class="item-name">Marka</span>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a href="{{route('admin.admin.plates.report')}}">
+                        <i class="nav-icon i-Arrow-Right-2"></i>
+                        <span class="item-name">Plaka Raporu</span>
+                    </a>
+                </li>
             </ul>
             <ul class="childNav" data-parent="definition">
                 <li class="nav-item">
@@ -836,7 +864,7 @@ $currencys = $currency::where('left_icon', "!=", 'TRY')->get();
             text: 'Select an option'
         }
     });
-    $('#location5,#drop_location').select2({
+    $('#location5,#drop_location,#plate').select2({
         dropdownParent: $(document.body),
     });
     $('select').on('select2:open', function(e){

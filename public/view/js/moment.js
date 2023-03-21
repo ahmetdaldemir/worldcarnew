@@ -947,10 +947,10 @@
 
     // LOCALES
 
-    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
+    var defaultLocaleMonths = 'Ocak_Şubat_Mart_Nisan_Mayıs_Haziran_Temmuz_Agustos_Eylül_Ekim_Kasım_Aralık'.split(
         '_'
         ),
-        defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split(
+        defaultLocaleMonthsShort = 'Ock_Şub_Mar_Nis_May_Haz_Tem_Agu_Eyl_Ekm_Kas_Ara'.split(
             '_'
         ),
         MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
@@ -1526,11 +1526,11 @@
         return ws.slice(n, 7).concat(ws.slice(0, n));
     }
 
-    var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split(
+    var defaultLocaleWeekdays = 'Pazar_Pazartesi_Salı_Çarşamba_Perşembe_Cuma_Cumartesi'.split(
         '_'
         ),
-        defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_'),
-        defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
+        defaultLocaleWeekdaysShort = 'Paz_Pzt_Sal_Çrş_Prş_Cum_Cmt'.split('_'),
+        defaultLocaleWeekdaysMin = 'Pz_Pzt_Sl_Çrş_Prş_Cm_Cmt'.split('_'),
         defaultWeekdaysRegex = matchWord,
         defaultWeekdaysShortRegex = matchWord,
         defaultWeekdaysMinRegex = matchWord;

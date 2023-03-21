@@ -19,12 +19,9 @@
                     <a href="/{{app()->getLocale()}}/{{__('destination_url')}}/{{$item->slug}}/{{$item->id}}"
                        class="card media-card">
                         <figure class="card-img-wrapper">
-                            @if($item->image == "")
-                                <img src="{{asset('storage/webp/'.$item->resim.'') }}" class="img-fluid card-img center" alt="{{$item->title}}">
-                            @else
-                                <img src="{{asset('storage/'.$item->image.'') }}" class="img-fluid card-img center"  alt="{{$item->title}}">
-                            @endif
-                        </figure>
+
+                                <img  src="{{asset('storage/webp/'.\App\Models\Destination::getimages($item->id)->title.'')}}" class="img-fluid card-img center"  alt="{{$item->title}}">
+                         </figure>
                         <div class="card-img-overlay">
                             <div class="card-content">
                                 <h4 class="card-title ucnokta">{{$item->title}}</h4>
@@ -73,7 +70,7 @@
         .card-img {
             max-width: 100%;
             text-align: center;
-            height: 316px
+            /*height: 316px*/
         }
 
         .ucnokta {
